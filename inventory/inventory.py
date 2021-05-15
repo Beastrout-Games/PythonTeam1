@@ -35,7 +35,7 @@ class Inventory(object):
             raise OperationDenied(item_type)
         
         elif item.quantity <= 0:
-            raise OutOFStock(item_type)
+            raise OutOfStock(item_type)
         
         self.lock(item_type)
         item.quantity -= 1

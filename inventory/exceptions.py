@@ -6,7 +6,7 @@ class InvalidItemType(Exception):
         print(f"Sorry, we don't sell {self.item_type}s.")
 
 
-class OutOFStock(Exception):
+class OutOfStock(Exception):
     def __init__(self, item_type):
         self.item_type = item_type
         

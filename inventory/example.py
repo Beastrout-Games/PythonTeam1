@@ -3,15 +3,17 @@ from inventory import *
 if __name__ == '__main__':
     inv = Inventory(
         Item('phone', 3), 
-        Item('laptop', 5)
+        Item('laptop', 0)
         )
+    
+    #item_type = input("What d'ya wanna buy, bro?")
 
     item_type = 'car'
 
     try:
         num_left = inv.purchase(item_type)
     
-    except (InvalidItemType, OutOFStock, OperationDenied) as ex:
+    except (InvalidItemType, OutOfStock, OperationDenied) as ex:
         ex.call()
         
     except:
