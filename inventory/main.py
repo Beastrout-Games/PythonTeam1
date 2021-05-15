@@ -6,21 +6,14 @@ if __name__ == '__main__':
         Item('laptop', 5)
         )
 
-    item_type = 'phone'
+    item_type = 'car'
 
     try:
         num_left = inv.purchase(item_type)
     
-    except InvalidItemType:
-        print(f"Sorry, we don't sell {item_type}s.")
-    
-    except OutOFStock:
-        print(f"Sorry, {item_type}s are out of stock.")
-
-    except OperationDenied:
-        # another part of the program is using this item
-        print(f"Sorry, we couldn't process your purchase. Please try again.")
-
+    except (InvalidItemType, OutOFStock, OperationDenied) as ex:
+        ex.call()
+        
     except:
         print(f"An unexpected error has occurred.")
     
