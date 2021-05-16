@@ -1,5 +1,4 @@
-import inventory as inv
-from exceptions import *
+from .exceptions import *
 
 def menu(stock):
     print("Welcome to out little shop! We offer:")
