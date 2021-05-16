@@ -1,4 +1,4 @@
-from store.inventory import *
+from src.store.inventory import *
 
 if __name__ == '__main__':
     inv = Inventory(

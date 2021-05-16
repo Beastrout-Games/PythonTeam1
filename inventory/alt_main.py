@@ -1,5 +1,5 @@
-import store.inventory as inv
-from store.menu import menu
+import src.store.inventory as inv
+from src.store.menu import menu
 
 if __name__ == '__main__':
     devices = inv.Inventory(
