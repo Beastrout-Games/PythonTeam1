@@ -1,4 +1,4 @@
-from exceptions import *
+from .exceptions import *
 
 class Item(object):
     def __init__(self, item_type, quantity) -> None:
